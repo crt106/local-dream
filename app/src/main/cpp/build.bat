@@ -1,7 +1,13 @@
 @echo off
 setlocal EnableDelayedExpansion
 
-cmake --preset android-release
+REM Add Android SDK's CMake and Ninja to PATH
+set "ANDROID_SDK_CMAKE=C:\Users\crt106\AppData\Local\Android\Sdk\cmake\4.1.2\bin"
+if exist "%ANDROID_SDK_CMAKE%" (
+    set "PATH=%ANDROID_SDK_CMAKE%;%PATH%"
+)
+
+cmake --preset android-release -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_C_COMPILER_LAUNCHER= -DCMAKE_CXX_COMPILER_LAUNCHER=
 if %ERRORLEVEL% neq 0 goto :error
 
 cmake --build --preset android-release

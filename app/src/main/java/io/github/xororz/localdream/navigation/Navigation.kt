@@ -7,4 +7,5 @@ sealed class Screen(val route: String) {
     }
 
     object Upscale : Screen("upscale")
+    object RenderPrep : Screen("render_prep")
 }

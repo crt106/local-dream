@@ -24,6 +24,7 @@ import androidx.navigation.NavController
 import io.github.xororz.localdream.data.*
 import io.github.xororz.localdream.navigation.Screen
 import io.github.xororz.localdream.service.ModelDownloadService
+import io.github.xororz.localdream.ui.play.PlayActivity
 import kotlinx.coroutines.launch
 import java.text.DecimalFormat
 import androidx.compose.foundation.gestures.detectTapGestures
@@ -589,6 +590,11 @@ fun ModelListScreen(
                     }
                     IconButton(onClick = { showHelpDialog = true }) {
                         Icon(Icons.AutoMirrored.Filled.Help, stringResource(R.string.help))
+                    }
+                    IconButton(onClick = {
+                        navController.navigate(Screen.RenderPrep.route)
+                    }) {
+                        Icon(Icons.Default.PlayCircle, "渲染准备")
                     }
                     if (Model.isQualcommDevice()) {
                         IconButton(onClick = { navController.navigate(Screen.Upscale.route) }) {

@@ -1,0 +1,12 @@
+qnn*
+output*
+images*
+model*
+.venv
+__pycache__
+clip
+unet*
+vae*
+*.pkl
+input_list*
+*.zip

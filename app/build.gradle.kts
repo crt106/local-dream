@@ -116,6 +116,10 @@ dependencies {
     implementation(libs.material3.xml)
     implementation(libs.coil.compose)
     implementation(libs.cropify)
+    implementation(libs.androidx.media3.exoplayer)
+    implementation(libs.androidx.media3.ui)
+    implementation(libs.androidx.media3.common)
+    implementation(libs.xcrash)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -20,6 +20,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".DreamApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:extractNativeLibs="true"
@@ -33,6 +34,13 @@
         android:theme="@style/Theme.LocalDream">
 
         <activity
+            android:name=".CrashActivity"
+            android:exported="false"
+            android:process=":crash"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LocalDream" />
+
+        <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|density|uiMode"
             android:exported="true"
@@ -43,6 +51,14 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.play.PlayActivity"
+            android:exported="true"
+            android:label="播放页面"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LocalDream">
         </activity>
 
         <service

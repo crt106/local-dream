@@ -1,0 +1,21 @@
+{
+  "graphs": [
+    {
+      "vtcm_mb": 2,
+      "graph_names": ["model"],
+      "O": 3.0,
+      "hvx_threads": 0
+    }
+  ],
+  "devices": [
+    {
+      "dsp_arch": "v68",
+      "cores": [
+        {
+          "perf_profile": "burst",
+          "rpc_control_latency": 100
+        }
+      ]
+    }
+  ]
+}

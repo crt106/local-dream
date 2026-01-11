@@ -1,0 +1,33 @@
+[project]
+name = "qnn"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "torch==2.5.1+cpu",
+    "diffusers==0.31.0",
+    "transformers==4.46.1",
+    "numpy==1.26.4",
+    "onnx>=1.18.0",
+    "packaging>=25.0",
+    "pandas>=2.2.3",
+    "pip>=25.1.1",
+    "pyyaml>=6.0.2",
+    "mnn==3.2.1",
+    "aliyun-log-python-sdk>=0.9.32",
+]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu" },
+]
+torchvision = [
+    { index = "pytorch-cpu" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
